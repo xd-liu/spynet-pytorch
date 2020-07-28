@@ -69,8 +69,12 @@ def main():
     fl_base = '/shared/xudongliu/code/pytorch-spynet/predictions/bdd-KT-val'
     pd_base = 'pd_mask/bdd-KT-val'
     list_file = '/shared/xudongliu/code/pytorch-liteflownet/lists/seg_track_val_new.txt'
-    if not os.path.exists(pd_base):
-        os.makedirs(pd_base)
+    
+    try:
+        if not os.path.exists(pd_base):
+            os.makedirs(pd_base)
+    except OSError as err:
+        print(err)
     args = []
 
     with open(list_file) as f:
