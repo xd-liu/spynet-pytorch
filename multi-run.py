@@ -13,7 +13,7 @@ def get_parser():
     parser.add_argument('--root', type=str, help='image root directory')
     parser.add_argument('--out', type=str, help='out directory')
     parser.add_argument('--model', type=str, help='model')
-    parser.add_argument('--show', type=int, default=10, help='show frequency')
+    parser.add_argument('--show', type=int, default=1, help='show frequency')
     return parser.parse_args()
 
 def main():
