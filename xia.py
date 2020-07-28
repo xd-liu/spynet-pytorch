@@ -66,8 +66,8 @@ def warping(fn_list):
 
 def main():
     gt_base = '/shared/xudongliu/code/semi-flow/mask'
-    fl_base = '/shared/xudongliu/code/pytorch-spynet/predictions/bdd-Sintel-val'
-    pd_base = 'pd_mask/bdd-Sintel-val'
+    fl_base = '/shared/xudongliu/code/pytorch-spynet/predictions/bdd-KT-val'
+    pd_base = 'pd_mask/bdd-KT-val'
     list_file = '/shared/xudongliu/code/pytorch-liteflownet/lists/seg_track_val_new.txt'
     if not os.path.exists(pd_base):
         os.makedirs(pd_base)
