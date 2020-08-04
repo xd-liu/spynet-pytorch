@@ -140,7 +140,6 @@ def main():
 
     with open(list_fn, 'r') as f:
         fnames = f.readlines()
-        assert len(fnames[0].strip().split(' ')) == 2 + args.evaluate
         names = [l.strip().split(' ')[0].split('/')[-1] for l in fnames]
     
     batch_size = 16
