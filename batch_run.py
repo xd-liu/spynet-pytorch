@@ -128,6 +128,8 @@ def main():
     if netNetwork is None:
         netNetwork = Network().cuda().eval()
         netNetwork = torch.nn.DataParallel(netNetwork).cuda()
+	
+    print("model loaded!")
     
     intWidth = 720
     intHeight = 1280
@@ -151,6 +153,7 @@ def main():
         num_workers=16,
         pin_memory=True)
     
+    print("begin inference!")
     with torch.no_grad():
         for i, (tenPreprocessedFirst, tenPreprocessedSecond) in enumerate(dataloader):
             print(i, len(val_loader))
