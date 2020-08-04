@@ -1,1 +1,5 @@
 *.pytorch
+*.flo
+*.txt
+*.png
+*.jpg

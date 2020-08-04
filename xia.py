@@ -69,7 +69,7 @@ def warping(fn_list):
 
 def main():
     gt_base = '/shared/xudongliu/code/semi-flow/mask'
-    fl_base = '/shared/xudongliu/code/pytorch-spynet/predictions/bdd-Sintel-val'
+    fl_base = '/shared/xudongliu/code/pytorch-pwc/predictions/bdd-Sintel-val'
     pd_base = 'pd_mask/bdd-Sintel-val'
     list_file = '/shared/xudongliu/code/pytorch-liteflownet/lists/seg_track_val_new.txt'
     
