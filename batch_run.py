@@ -145,7 +145,7 @@ def main():
     batch_size = 16
     run_dataset = Mdata(data_root, list_fn)
     dataloader = torch.utils.data.DataLoader(
-        val_data,
+        run_dataset,
         batch_size=batch_size,
         shuffle=False,
         num_workers=16,
@@ -153,6 +153,7 @@ def main():
     
     with torch.no_grad():
         for i, (tenPreprocessedFirst, tenPreprocessedSecond) in enumerate(val_loader):
+            print(i, len(val_loader))
             tenPreprocessedFirst = tenPreprocessedFirst.cuda()
             tenPreprocessedSecond = tenPreprocessedSecond.cuda()
             tenPreprocessedFirst = torch.nn.functional.interpolate(input=tenPreprocessedFirst, size=(intPreprocessedHeight, intPreprocessedWidth), mode='bilinear', align_corners=False)
