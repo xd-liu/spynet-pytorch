@@ -152,7 +152,7 @@ def main():
         pin_memory=True)
     
     with torch.no_grad():
-        for i, (tenPreprocessedFirst, tenPreprocessedSecond) in enumerate(val_loader):
+        for i, (tenPreprocessedFirst, tenPreprocessedSecond) in enumerate(dataloader):
             print(i, len(val_loader))
             tenPreprocessedFirst = tenPreprocessedFirst.cuda()
             tenPreprocessedSecond = tenPreprocessedSecond.cuda()
