@@ -88,7 +88,7 @@ class Network(torch.nn.Module):
 
 		self.netBasic = torch.nn.ModuleList([ Basic(intLevel) for intLevel in range(6) ])
 
-		self.load_state_dict({ strKey.replace('module', 'net'): tenWeight for strKey, tenWeight in torch.load(__file__.replace('run.py', 'network-' + arguments_strModel + '.pytorch')).items() })
+		self.load_state_dict({ strKey.replace('module', 'net'): tenWeight for strKey, tenWeight in torch.load(__file__.replace('batch_run.py', 'network-' + arguments_strModel + '.pytorch')).items() })
 	# end
 
 	def forward(self, tenFirst, tenSecond):
