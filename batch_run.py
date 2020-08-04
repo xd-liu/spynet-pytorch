@@ -134,7 +134,7 @@ def main():
     intPreprocessedWidth = int(math.floor(math.ceil(intWidth / 32.0) * 32.0))
     intPreprocessedHeight = int(math.floor(math.ceil(intHeight / 32.0) * 32.0))
 
-    list_fn = '/shared/xudongliu/code/semi-flow/hd3/lists/seg_track_val_new_3.txts'
+    list_fn = '/shared/xudongliu/code/semi-flow/hd3/lists/seg_track_val_new_3.txt'
     data_root = '/data5/bdd100k/images/track/val'
     output_dir = 'predictions/bdd-KT-val-3'
 
