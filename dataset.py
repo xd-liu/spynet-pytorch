@@ -3,6 +3,7 @@ import numpy as np
 from PIL import Image
 from torch.utils.data import Dataset
 import os
+import torch
 
 
 class Mdata(Dataset):
