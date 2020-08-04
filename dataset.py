@@ -1,5 +1,5 @@
 from os.path import exists, join, splitext
-import numpy as np
+import numpy
 from PIL import Image
 from torch.utils.data import Dataset
 import os
