@@ -156,7 +156,7 @@ def main():
     print("begin inference!")
     with torch.no_grad():
         for i, (tenPreprocessedFirst, tenPreprocessedSecond) in enumerate(dataloader):
-            print(i, len(val_loader))
+            print(i, len(dataloader))
             tenPreprocessedFirst = tenPreprocessedFirst.cuda()
             tenPreprocessedSecond = tenPreprocessedSecond.cuda()
             tenPreprocessedFirst = torch.nn.functional.interpolate(input=tenPreprocessedFirst, size=(intPreprocessedHeight, intPreprocessedWidth), mode='bilinear', align_corners=False)
